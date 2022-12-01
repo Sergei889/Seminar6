@@ -13,8 +13,12 @@ Console.WriteLine("Введите значение b2");
 double b2 = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите число k2");
 double k2 = Convert.ToInt32(Console.ReadLine());
+double pointOfIntersection (double b1, double k1, double b2, double k2)
+{         
+    double x = (b2 - b1) / (k1 - k2);
+    double y = k1 * x + b1;
+    Console.WriteLine($"Точка пересечения двух прямых: ({x};{y})");
+    return x;
+}
 
-double x = (-b2 + b1)/(-k1 + k2);
-double y = k2 * x + b2;
-
-Console.WriteLine($"Две прямые пересекутся в точке с координатами X: {x}, Y: {y}");
+double result = pointOfIntersection (b1, k1, b2, k2);
